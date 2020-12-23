@@ -1,0 +1,16 @@
+<p>Repositories page</p>
+<div *ngFor="let each of repos | async">
+    
+    <div class="media-left">
+        <a href='#'>
+            <img class="avatar media-object" src="{{each.owner.avatar_url}}">
+        </a>
+    </div> 
+
+     <div class="media-body">
+        <!-- <a [routerLink]="['/profile', each.id">{{each.name}}</a> -->
+        Repo name : <a routerLink="/profile/{{each.id}}/{{each.name}}">{{each.name}}</a><br/>
+        Repo desc : <span>{{each.description}}</span><br/>
+        Repo url : <a href="each.owner.html_url">{{each.owner.html_url}}</a>
+    </div>
+</div>
